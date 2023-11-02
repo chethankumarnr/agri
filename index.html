@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Agri App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add custom CSS styles or animations here */
+        .fade-out {
+            animation: fadeOut 1s ease 3s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background-color: #1a202c; /* Background color for the footer */
+            color: white; /* Text color for the footer */
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .text-color-change {
+            animation: textColorChange 4s ease 1s forwards;
+        }
+
+        @keyframes textColorChange {
+            0% {
+                color: #ff9933; /* Saffron color */
+            }
+            50%{
+                color: white; /* White color after 1 second */
+            }
+            66%{
+                color: #38c172; /* Green color after 2 seconds */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-blue-500 flex items-center justify-center h-screen">
+    <div class="text-white text-center animate__animated animate__bounce animate__infinite animate__delay-1s">
+        <div class="fade-out background-change text-color-change text-4xl font-bold " style="color: #ff9933;">
+            <b>Welcome to<br>My Agri App</b>
+        </div>
+    </div>
+    <div class="footer">
+        Designed and Developed by Chethan Kumar
+    </div>
+    <script>
+        setTimeout(function() {
+            // Redirect to another page after 3 seconds
+            window.location.href = 'wait.html';
+        }, 4000);
+    </script>
+</div>
+</body>
+</html>
